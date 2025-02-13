@@ -61,35 +61,7 @@ const effects = [
     },
     
     // Effekt 2: Wohnzimmer-Szene
-    () => {
-        const livingRoom = document.createElement('div');
-        livingRoom.classList.add('living-room');
-        livingRoom.innerHTML = `
-            <div class="sofa">🛋️</div>
-            <div class="table">🪑</div>
-            <div class="lamp">💡</div>
-            <div class="tv">📺</div>
-            <div class="rug"></div>
-        `;
-        document.body.appendChild(livingRoom);
-
-        // Button versteckt sich irgendwo im Wohnzimmer
-        const roomWidth = livingRoom.offsetWidth;
-        const roomHeight = livingRoom.offsetHeight;
-
-        const x = Math.random() * (roomWidth - 100) + 50;
-        const y = Math.random() * (roomHeight - 100) + 50;
-
-        noButton.style.position = 'absolute';
-        noButton.style.left = `${x}px`;
-        noButton.style.top = `${y}px`;
-        noButton.style.zIndex = '10';
-
-        // Entferne das Wohnzimmer nach 5 Sekunden
-        setTimeout(() => {
-            document.body.removeChild(livingRoom);
-        }, 5000);
-    },
+    
     
     // Effekt 3: Der Button springt wie ein Ball
     () => {
